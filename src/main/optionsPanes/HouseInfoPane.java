@@ -10,36 +10,11 @@ import java.awt.event.ActionListener;
 import java.math.BigDecimal;
 
 public class HouseInfoPane extends JFrame {
-    protected String purchasePrice;
-    protected String updatesPrice;
-    protected String piti;
-    protected String address1;
-    protected String address2;
-    protected String zip;
-    protected String hoaFee;
-    protected String taxes;
-    protected String insurance;
-    protected String rentalIncome;
-    private JTextField purchasePriceTextbox;
-    private JTextField updatesPriceTextbox;
-    private JTextField pitiTextbox;
-    private JTextField address1Textbox;
-    private JTextField address2Textbox;
-    private JTextField zipTextbox;
-    private JTextField hoaFeeTextbox;
-    private JTextField taxesTextbox;
-    private JTextField insuranceTextbox;
-    private JTextField rentalIncomeTextbox;
-    private JLabel purchasePriceLabel;
-    private JLabel updatesPriceLabel;
-    private JLabel pitiLabel;
-    private JLabel address1Label;
-    private JLabel address2Label;
-    private JLabel zipLabel;
-    private JLabel hoaFeeLabel;
-    private JLabel taxesLabel;
-    private JLabel insuranceLabel;
-    private JLabel rentalIncomeLabel;
+    protected String purchasePrice, updatesPrice, piti, address1, address2, zip, hoaFee, taxes, insurance, rentalIncome;
+    private JTextField purchasePriceTextbox, updatesPriceTextbox, pitiTextbox, address1Textbox, address2Textbox, zipTextbox, hoaFeeTextbox,
+    taxesTextbox, insuranceTextbox, rentalIncomeTextbox;
+       private JLabel purchasePriceLabel;
+    private JLabel updatesPriceLabel, pitiLabel, address1Label, address2Label, zipLabel, hoaFeeLabel, taxesLabel, insuranceLabel, rentalIncomeLabel;
     private JButton submitButton;
     private House _house;
 
@@ -47,11 +22,12 @@ public class HouseInfoPane extends JFrame {
         _house = house;
         createView();
         setTitle("House Information");
-        setDefaultCloseOperation(3);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         pack();
         setSize(800, 800);
-        setLocationRelativeTo((Component)null);
+        setLocationRelativeTo(null);
         setResizable(true);
+        setVisible(true);
     }
 
     private void createView() {
@@ -151,10 +127,6 @@ public class HouseInfoPane extends JFrame {
         panel.add(insuranceTextbox, right);
         panel.add(rentalIncomeLabel, left);
         panel.add(rentalIncomeTextbox, right);
-    }
-
-    public static void main(String[] param0) {
-        // $FF: Couldn't be decompiled
     }
 
     private class submitListener implements ActionListener {

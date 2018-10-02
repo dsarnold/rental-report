@@ -1,7 +1,6 @@
 package main.optionsPanes;
 
 import java.awt.BorderLayout;
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -27,7 +26,7 @@ public class RentalReport extends JFrame {
     private JTextField purchasePriceTextbox, updatesPriceTextbox, pitiTextbox, address1Textbox, address2Textbox, zipTextbox,
             hoaFeeTextbox, taxesTextbox, insuranceTextbox, rentalIncomeTextbox;
     private House _house;
-    JPanel _panel, _southPanel, _westPanel, _centerPanel;
+    JPanel _panel, _bottomPanel, _leftPanel, _centerPanel;
     private RentalManagementCompany _paradiseRmc, _clcRmc, _vipRmc;
     private CalculationUtils utils = new CalculationUtils();
 
@@ -61,8 +60,8 @@ public class RentalReport extends JFrame {
         createLeftPanel();
         createCenterPanel();
         _panel.add(_centerPanel, "Center");
-        _panel.add(_southPanel, "South");
-        _panel.add(_westPanel, "West");
+        _panel.add(_bottomPanel, "South");
+        _panel.add(_leftPanel, "West");
     }
 
     private void createCenterPanel() {
@@ -159,67 +158,67 @@ public class RentalReport extends JFrame {
     }
 
     private void createLeftPanel() {
-        _westPanel = new JPanel();
+        _leftPanel = new JPanel();
         pack();
-        _westPanel.setPreferredSize(new Dimension(200, 400));
-        _westPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
-        _westPanel.setBorder(BorderFactory.createRaisedBevelBorder());
+        _leftPanel.setPreferredSize(new Dimension(200, 400));
+        _leftPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
+        _leftPanel.setBorder(BorderFactory.createRaisedBevelBorder());
         if (_house.getPurchasePrice() != null) {
-            purchasePriceLabel = new JLabel(_house.getPurchasePrice().toString());
+            purchasePriceLabel = new JLabel("Purchase Price: " + _house.getPurchasePrice().toString());
         } else {
             purchasePriceLabel = new JLabel("Purchase Price: ");
         }
 
         if (_house.getUpdatesPrice() != null) {
-            updatesPriceLabel = new JLabel(_house.getUpdatesPrice().toString());
+            updatesPriceLabel = new JLabel("Update Price:  " + _house.getUpdatesPrice().toString());
         } else {
             updatesPriceLabel = new JLabel("Update Price:  ");
         }
 
         if (_house.getPiti() != null) {
-            pitiLabel = new JLabel(_house.getPiti().toString());
+            pitiLabel = new JLabel("PITI: " + _house.getPiti().toString());
         } else {
             pitiLabel = new JLabel("PITI: ");
         }
 
         if (_house.getAddress1() != null) {
-            address1Label = new JLabel(_house.getAddress1());
+            address1Label = new JLabel("Address 1: " + _house.getAddress1());
         } else {
             address1Label = new JLabel("Address 1: ");
         }
 
         if (_house.getAddress2() != null) {
-            address2Label = new JLabel(_house.getAddress2());
+            address2Label = new JLabel("Address 2: " + _house.getAddress2());
         } else {
             address2Label = new JLabel("Address 2: ");
         }
 
         if (_house.getZip() != null) {
-            zipLabel = new JLabel(_house.getZip());
+            zipLabel = new JLabel("Zip: " + _house.getZip());
         } else {
             zipLabel = new JLabel("Zip: ");
         }
 
         if (_house.getHoaFee() != null) {
-            hoaFeeLabel = new JLabel(_house.getHoaFee().toString());
+            hoaFeeLabel = new JLabel("HOA Fee: " + _house.getHoaFee().toString());
         } else {
             hoaFeeLabel = new JLabel("HOA Fee: ");
         }
 
         if (_house.getTaxes() != null) {
-            taxesLabel = new JLabel(_house.getTaxes().toString());
+            taxesLabel = new JLabel("Taxes: " + _house.getTaxes().toString());
         } else {
             taxesLabel = new JLabel("Taxes: ");
         }
 
         if (_house.getInsurance() != null) {
-            insuranceLabel = new JLabel(_house.getInsurance().toString());
+            insuranceLabel = new JLabel("Insurance: " + _house.getInsurance().toString());
         } else {
             insuranceLabel = new JLabel("Insurance: ");
         }
 
         if (_house.getRentalIncome() != null) {
-            rentalIncomeLabel = new JLabel(_house.getRentalIncome().toString());
+            rentalIncomeLabel = new JLabel("Rental Income: " + _house.getRentalIncome().toString());
         } else {
             rentalIncomeLabel = new JLabel("Rental Income: ");
         }
@@ -234,25 +233,25 @@ public class RentalReport extends JFrame {
         taxesLabel.setPreferredSize(new Dimension(200, 15));
         insuranceLabel.setPreferredSize(new Dimension(200, 15));
         rentalIncomeLabel.setPreferredSize(new Dimension(200, 15));
-        _westPanel.add(address1Label);
-        _westPanel.add(address2Label);
-        _westPanel.add(zipLabel);
-        _westPanel.add(purchasePriceLabel);
-        _westPanel.add(updatesPriceLabel);
-        _westPanel.add(pitiLabel);
-        _westPanel.add(hoaFeeLabel);
-        _westPanel.add(taxesLabel);
-        _westPanel.add(insuranceLabel);
-        _westPanel.add(rentalIncomeLabel);
+        _leftPanel.add(address1Label);
+        _leftPanel.add(address2Label);
+        _leftPanel.add(zipLabel);
+        _leftPanel.add(purchasePriceLabel);
+        _leftPanel.add(updatesPriceLabel);
+        _leftPanel.add(pitiLabel);
+        _leftPanel.add(hoaFeeLabel);
+        _leftPanel.add(taxesLabel);
+        _leftPanel.add(insuranceLabel);
+        _leftPanel.add(rentalIncomeLabel);
     }
 
     private void createBottomPanel() {
-        _southPanel = new JPanel();
+        _bottomPanel = new JPanel();
         houseInfoPane = new JButton();
         houseInfoPane.setPreferredSize(new Dimension(100, 20));
         houseInfoPane.setText("House Info");
         houseInfoPane.addActionListener(new houseListenter());
-        _southPanel.add(houseInfoPane);
+        _bottomPanel.add(houseInfoPane);
     }
 
     private class houseListenter implements ActionListener {
