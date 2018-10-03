@@ -21,17 +21,14 @@ import main.java.rentalManagementCompanies.BeInFlorida;
 import main.java.rentalManagementCompanies.ParadiseProperties;
 import main.java.rentalManagementCompanies.RentalManagementCompany;
 import main.java.rentalManagementCompanies.ClcManagement;
+import main.java.utils.PaneUtils;
 
 public class RentalReport extends JFrame {
-    private JButton houseInfoPane;
-    private JLabel purchasePriceLabel, updatesPriceLabel, address1Label, address2Label, zipLabel, hoaFeeLabel,
-            taxesLabel, insuranceLabel, rentalIncomeLabel, paradiseRentalIncomeLabel, clcRentalIncomeLabel, beInFloridaIncomeLabel, pitiLabel;
-    private JTextField purchasePriceTextbox, updatesPriceTextbox, pitiTextbox, address1Textbox, address2Textbox, zipTextbox,
-            hoaFeeTextbox, taxesTextbox, insuranceTextbox, rentalIncomeTextbox;
     private House _house;
-    JPanel _panel, _bottomPanel, _leftPanel, _centerPanel;
+    private JPanel _panel, _bottomPanel, _leftPanel, _centerPanel;
     private RentalManagementCompany _paradiseRmc, _clcRmc, _beInFloridaRmc;
     private CalculationUtils utils = new CalculationUtils();
+    private PaneUtils paneUtils = new PaneUtils();
 
     public static void main(String[] args) {
         House house = new House(new BigDecimal(200000), new BigDecimal(2000), new BigDecimal(1500), "123 Brandon Way", "Apt. 3", "12345", new BigDecimal(300), new BigDecimal(150), new BigDecimal(150), new BigDecimal(4000));
@@ -69,96 +66,68 @@ public class RentalReport extends JFrame {
     }
 
     private void createCenterPanel() {
-        JLabel blank = gridLabel("");
-        JLabel paradiseNameLabel = gridLabel(_paradiseRmc.getCompanyName());
-        JLabel clcNameLabel = gridLabel(_clcRmc.getCompanyName());
-        JLabel beInFloridaNameLabel = gridLabel(_beInFloridaRmc.getCompanyName());
-        JLabel rentalIncomeLabel = gridLabel("Rental Income");
-        if (_house.getRentalIncome() != null) {
-            paradiseRentalIncomeLabel = gridLabel(_house.getRentalIncome().toString());
-            clcRentalIncomeLabel = gridLabel(_house.getRentalIncome().toString());
-            beInFloridaIncomeLabel = gridLabel(_house.getRentalIncome().toString());
-        } else {
-            paradiseRentalIncomeLabel = gridLabel("");
-            clcRentalIncomeLabel = gridLabel("");
-            beInFloridaIncomeLabel = gridLabel("");
-        }
-
-        JLabel commissionLabel = gridLabel("Commission");
-        JLabel parCommissionLabel = gridLabel(utils.getCommission(_house, _paradiseRmc));
-        JLabel clcCommissionLabel = gridLabel(utils.getCommission(_house, _clcRmc));
-        JLabel beInFloridaCommissionLabel = gridLabel(utils.getCommission(_house, _beInFloridaRmc));
-        JLabel bookingChargesLabel = gridLabel("Max Booking Charges");
-        JLabel parBookingChargeLabel = gridLabel(utils.getMaxBookingCharge(_house, _paradiseRmc));
-        JLabel clcBookingChargeLabel = gridLabel(utils.getMaxBookingCharge(_house, _clcRmc));
-        JLabel beInFloridaBookingChargeLabel = gridLabel(utils.getMaxBookingCharge(_house, _beInFloridaRmc));
-        JLabel managementFeeLabel = gridLabel("Management Fee");
-        JLabel parManagementFeeLabel = gridLabel(_paradiseRmc.getManagementFee().toString());
-        JLabel clcManagementFeeLabel = gridLabel(_clcRmc.getManagementFee().toString());
-        JLabel beInFloridaManagementFeeLabel = gridLabel(_beInFloridaRmc.getManagementFee().toString());
-        JLabel cleaningLabel = gridLabel("Cleaning Fee");
-        JLabel parCleaningLabel = gridLabel(_paradiseRmc.getCleaningFee().toString());
-        JLabel clcCleaningLabel = gridLabel(_clcRmc.getCleaningFee().toString());
-        JLabel beInFloridaCleaningLabel = gridLabel(_beInFloridaRmc.getCleaningFee().toString());
-        JLabel resortManagementServicesLabel = gridLabel("Resort Management Services");
-        JLabel parRMSLabel = gridLabel(_paradiseRmc.getResortManagementFee().toString());
-        JLabel clcRMSLabel = gridLabel(_clcRmc.getResortManagementFee().toString());
-        JLabel beInFloridaRMSLabel = gridLabel(_beInFloridaRmc.getResortManagementFee().toString());
-        JLabel totalMaxIncome = gridLabel("Max Income");
-        JLabel parMaxLabel = gridLabel(utils.getMaxIncome(_house, _paradiseRmc));
-        JLabel clcMaxLabel = gridLabel(utils.getMaxIncome(_house, _clcRmc));
-        JLabel beInFloridaMaxLabel = gridLabel(utils.getMaxIncome(_house, _beInFloridaRmc));
-        JLabel totalMinIncome = gridLabel("Min Income");
-        JLabel parMinLabel = gridLabel("0");
-        JLabel clcMinLabel = gridLabel("0");
-        JLabel beInFloridaMinLabel = gridLabel("0");
         _centerPanel = new JPanel(new GridLayout(9, 4));
         pack();
         _centerPanel.setPreferredSize(new Dimension(400, 400));
         _centerPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         _centerPanel.setBorder(BorderFactory.createRaisedBevelBorder());
-        _centerPanel.add(blank);
-        _centerPanel.add(paradiseNameLabel);
-        _centerPanel.add(clcNameLabel);
-        _centerPanel.add(beInFloridaNameLabel);
-        _centerPanel.add(rentalIncomeLabel);
+
+        _centerPanel.add(paneUtils.gridLabel(""));
+        _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getCompanyName()));
+        _centerPanel.add(paneUtils.gridLabel(_clcRmc.getCompanyName()));
+        _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getCompanyName()));
+
+        _centerPanel.add(paneUtils.gridLabel("Rental Income"));
+        JLabel paradiseRentalIncomeLabel;
+        JLabel clcRentalIncomeLabel;
+        JLabel beInFloridaIncomeLabel;
+        if (_house.getRentalIncome() != null) {
+            paradiseRentalIncomeLabel = paneUtils.gridLabel(_house.getRentalIncome().toString());
+            clcRentalIncomeLabel = paneUtils.gridLabel(_house.getRentalIncome().toString());
+            beInFloridaIncomeLabel = paneUtils.gridLabel(_house.getRentalIncome().toString());
+        } else {
+            paradiseRentalIncomeLabel = paneUtils.gridLabel("");
+            clcRentalIncomeLabel = paneUtils.gridLabel("");
+            beInFloridaIncomeLabel = paneUtils.gridLabel("");
+        }
         _centerPanel.add(paradiseRentalIncomeLabel);
         _centerPanel.add(clcRentalIncomeLabel);
         _centerPanel.add(beInFloridaIncomeLabel);
-        _centerPanel.add(commissionLabel);
-        _centerPanel.add(parCommissionLabel);
-        _centerPanel.add(clcCommissionLabel);
-        _centerPanel.add(beInFloridaCommissionLabel);
-        _centerPanel.add(bookingChargesLabel);
-        _centerPanel.add(parBookingChargeLabel);
-        _centerPanel.add(clcBookingChargeLabel);
-        _centerPanel.add(beInFloridaBookingChargeLabel);
-        _centerPanel.add(managementFeeLabel);
-        _centerPanel.add(parManagementFeeLabel);
-        _centerPanel.add(clcManagementFeeLabel);
-        _centerPanel.add(beInFloridaManagementFeeLabel);
-        _centerPanel.add(cleaningLabel);
-        _centerPanel.add(parCleaningLabel);
-        _centerPanel.add(clcCleaningLabel);
-        _centerPanel.add(beInFloridaCleaningLabel);
-        _centerPanel.add(resortManagementServicesLabel);
-        _centerPanel.add(parRMSLabel);
-        _centerPanel.add(clcRMSLabel);
-        _centerPanel.add(beInFloridaRMSLabel);
-        _centerPanel.add(totalMaxIncome);
-        _centerPanel.add(parMaxLabel);
-        _centerPanel.add(clcMaxLabel);
-        _centerPanel.add(beInFloridaMaxLabel);
-        _centerPanel.add(totalMinIncome);
-        _centerPanel.add(parMinLabel);
-        _centerPanel.add(clcMinLabel);
-        _centerPanel.add(beInFloridaMinLabel);
-    }
 
-    private JLabel gridLabel(String text) {
-        JLabel label = new JLabel(text, 0);
-        label.setBorder(BorderFactory.createRaisedBevelBorder());
-        return label;
+        _centerPanel.add(paneUtils.gridLabel("Commission"));
+        _centerPanel.add(paneUtils.gridLabel(utils.getCommission(_house, _paradiseRmc)));
+        _centerPanel.add(paneUtils.gridLabel(utils.getCommission(_house, _clcRmc)));
+        _centerPanel.add(paneUtils.gridLabel(utils.getCommission(_house, _beInFloridaRmc)));
+
+        _centerPanel.add(paneUtils.gridLabel("Max Booking Charges"));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaxBookingCharge(_house, _paradiseRmc)));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaxBookingCharge(_house, _clcRmc)));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaxBookingCharge(_house, _beInFloridaRmc)));
+
+        _centerPanel.add(paneUtils.gridLabel("Management Fee"));
+        _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getManagementFee().toString()));
+        _centerPanel.add(paneUtils.gridLabel(_clcRmc.getManagementFee().toString()));
+        _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getManagementFee().toString()));
+
+        _centerPanel.add(paneUtils.gridLabel("Cleaning Fee"));
+        _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getCleaningFee().toString()));
+        _centerPanel.add(paneUtils.gridLabel(_clcRmc.getCleaningFee().toString()));
+        _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getCleaningFee().toString()));
+
+        _centerPanel.add(paneUtils.gridLabel("Resort Management Services"));
+        _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getResortManagementFee().toString()));
+        _centerPanel.add(paneUtils.gridLabel(_clcRmc.getResortManagementFee().toString()));
+        _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getResortManagementFee().toString()));
+
+        _centerPanel.add(paneUtils.gridLabel("Max Income"));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaxIncome(_house, _paradiseRmc)));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaxIncome(_house, _clcRmc)));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaxIncome(_house, _beInFloridaRmc)));
+
+        _centerPanel.add(paneUtils.gridLabel("Min Income"));
+        _centerPanel.add(paneUtils.gridLabel("Not Implemented"));
+        _centerPanel.add(paneUtils.gridLabel("Not Implemented"));
+        _centerPanel.add(paneUtils.gridLabel("Not Implemented"));
     }
 
     private void createLeftPanel() {
@@ -167,60 +136,70 @@ public class RentalReport extends JFrame {
         _leftPanel.setPreferredSize(new Dimension(200, 400));
         _leftPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         _leftPanel.setBorder(BorderFactory.createRaisedBevelBorder());
+        JLabel purchasePriceLabel;
         if (_house.getPurchasePrice() != null) {
             purchasePriceLabel = new JLabel("Purchase Price: " + _house.getPurchasePrice().toString());
         } else {
             purchasePriceLabel = new JLabel("Purchase Price: ");
         }
 
+        JLabel updatesPriceLabel;
         if (_house.getUpdatesPrice() != null) {
             updatesPriceLabel = new JLabel("Update Price:  " + _house.getUpdatesPrice().toString());
         } else {
             updatesPriceLabel = new JLabel("Update Price:  ");
         }
 
+        JLabel pitiLabel;
         if (_house.getPiti() != null) {
             pitiLabel = new JLabel("PITI: " + _house.getPiti().toString());
         } else {
             pitiLabel = new JLabel("PITI: ");
         }
 
+        JLabel address1Label;
         if (_house.getAddress1() != null) {
             address1Label = new JLabel("Address 1: " + _house.getAddress1());
         } else {
             address1Label = new JLabel("Address 1: ");
         }
 
+        JLabel address2Label;
         if (_house.getAddress2() != null) {
             address2Label = new JLabel("Address 2: " + _house.getAddress2());
         } else {
             address2Label = new JLabel("Address 2: ");
         }
 
+        JLabel zipLabel;
         if (_house.getZip() != null) {
             zipLabel = new JLabel("Zip: " + _house.getZip());
         } else {
             zipLabel = new JLabel("Zip: ");
         }
 
+        JLabel hoaFeeLabel;
         if (_house.getHoaFee() != null) {
             hoaFeeLabel = new JLabel("HOA Fee: " + _house.getHoaFee().toString());
         } else {
             hoaFeeLabel = new JLabel("HOA Fee: ");
         }
 
+        JLabel taxesLabel;
         if (_house.getTaxes() != null) {
             taxesLabel = new JLabel("Taxes: " + _house.getTaxes().toString());
         } else {
             taxesLabel = new JLabel("Taxes: ");
         }
 
+        JLabel insuranceLabel;
         if (_house.getInsurance() != null) {
             insuranceLabel = new JLabel("Insurance: " + _house.getInsurance().toString());
         } else {
             insuranceLabel = new JLabel("Insurance: ");
         }
 
+        JLabel rentalIncomeLabel;
         if (_house.getRentalIncome() != null) {
             rentalIncomeLabel = new JLabel("Rental Income: " + _house.getRentalIncome().toString());
         } else {
@@ -251,11 +230,18 @@ public class RentalReport extends JFrame {
 
     private void createBottomPanel() {
         _bottomPanel = new JPanel();
-        houseInfoPane = new JButton();
-        houseInfoPane.setPreferredSize(new Dimension(100, 20));
-        houseInfoPane.setText("House Info");
-        houseInfoPane.addActionListener(new houseListenter());
-        _bottomPanel.add(houseInfoPane);
+        JButton houseButton = new JButton();
+        houseButton.setPreferredSize(new Dimension(100, 20));
+        houseButton.setText("House Info");
+        houseButton.addActionListener(new houseListenter());
+
+        JButton rmcInfoPane = new JButton();
+        rmcInfoPane.setPreferredSize(new Dimension(100, 20));
+        rmcInfoPane.setText("Rental Management Info");
+        rmcInfoPane.addActionListener(new rmcListenter());
+
+        _bottomPanel.add(houseButton);
+        _bottomPanel.add(rmcInfoPane);
     }
 
     private class houseListenter implements ActionListener {
@@ -268,19 +254,14 @@ public class RentalReport extends JFrame {
         }
     }
 
-    private class paradiceRmcListenter implements ActionListener {
-        private paradiceRmcListenter() {
+    private class rmcListenter implements ActionListener {
+        private rmcListenter() {
         }
 
         public void actionPerformed(ActionEvent e) {
+            setVisible(false);
+            (new RmcInfoPane(_paradiseRmc, _clcRmc, _beInFloridaRmc, _house)).setVisible(true);
         }
     }
 
-    private class clcRmcListenter implements ActionListener {
-        private clcRmcListenter() {
-        }
-
-        public void actionPerformed(ActionEvent e) {
-        }
-    }
 }

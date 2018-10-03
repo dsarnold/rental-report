@@ -3,6 +3,7 @@ package main.java.rentalManagementCompanies;
 import java.math.BigDecimal;
 
 public abstract class AbstractRentalManagementCompany implements RentalManagementCompany {
+    String website;
     String phoneNumber;
     Double avgMonthlyOccupancy;
     Boolean canOwnersFindBooking;
@@ -20,7 +21,8 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
     BigDecimal pestMaintenance;
     BigDecimal linenReplacement;
 
-    public AbstractRentalManagementCompany(String phoneNumber, Double avgMonthlyOccupancy, Boolean canOwnersFindBooking, Boolean enterExitFees, Boolean discountForMultipleHomes, String companyName, Double commission, Double maxBookingCharge, Double minBookingCharge, BigDecimal managementFee, BigDecimal resortManagementFee, BigDecimal rentalInsurance, BigDecimal cleaningFee, BigDecimal poolService, BigDecimal pestMaintenance, BigDecimal linenReplacement) {
+    public AbstractRentalManagementCompany(String website, String phoneNumber, Double avgMonthlyOccupancy, Boolean canOwnersFindBooking, Boolean enterExitFees, Boolean discountForMultipleHomes, String companyName, Double commission, Double maxBookingCharge, Double minBookingCharge, BigDecimal managementFee, BigDecimal resortManagementFee, BigDecimal rentalInsurance, BigDecimal cleaningFee, BigDecimal poolService, BigDecimal pestMaintenance, BigDecimal linenReplacement) {
+        this.website = website;
         this.phoneNumber = phoneNumber;
         this.avgMonthlyOccupancy = avgMonthlyOccupancy;
         this.canOwnersFindBooking = canOwnersFindBooking;
@@ -40,13 +42,23 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
     }
 
     @Override
+    public String getWebsite() {
+        return website;
+    }
+
+    @Override
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    @Override
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
     @Override
     public void setPhoneNumber(String phoneNumber) {
-
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -56,7 +68,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setAvgMonthlyOccupancy(Double avgMonthlyOccupancy) {
-
+        this.avgMonthlyOccupancy = avgMonthlyOccupancy;
     }
 
     @Override
@@ -66,7 +78,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setCanOwnersFindBooking(Boolean canOwnersFindBooking) {
-
+        this.canOwnersFindBooking = canOwnersFindBooking;
     }
 
     @Override
@@ -76,7 +88,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setEnterExitFees(Boolean enterExitFees) {
-
+        this.enterExitFees = enterExitFees;
     }
 
     @Override
@@ -86,7 +98,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setDiscountForMultipleHomes(Boolean discountForMultipleHomes) {
-
+        this.discountForMultipleHomes = discountForMultipleHomes;
     }
 
     @Override
@@ -96,7 +108,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setLinenReplacement(BigDecimal linenReplacement) {
-
+        this.linenReplacement = linenReplacement;
     }
 
     @Override
@@ -106,7 +118,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setCompanyName(String companyName) {
-
+        this.companyName = companyName;
     }
 
     @Override
@@ -116,7 +128,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setCommission(Double commission) {
-
+        this.commission = commission;
     }
 
     @Override
@@ -126,7 +138,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setMaxBookingCharge(Double maxBookingCharge) {
-
+        this.maxBookingCharge = maxBookingCharge;
     }
 
     @Override
@@ -136,7 +148,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setMinBookingCharge(Double minBookingCharge) {
-
+        this.minBookingCharge = minBookingCharge;
     }
 
     @Override
@@ -146,7 +158,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setManagementFee(BigDecimal managementFee) {
-
+        this.managementFee = managementFee;
     }
 
     @Override
@@ -156,7 +168,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setResortManagementFee(BigDecimal resortManagementFee) {
-
+        this.resortManagementFee = resortManagementFee;
     }
 
     @Override
@@ -166,7 +178,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setRentalInsurance(BigDecimal rentalInsurance) {
-
+        this.rentalInsurance = rentalInsurance;
     }
 
     @Override
@@ -176,7 +188,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setCleaningFee(BigDecimal cleaningFee) {
-
+        this.cleaningFee = cleaningFee;
     }
 
     @Override
@@ -186,7 +198,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setPoolService(BigDecimal poolService) {
-
+        this.poolService = poolService;
     }
 
     @Override
@@ -196,6 +208,6 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
 
     @Override
     public void setPestMaintenance(BigDecimal pestMaintenance) {
-
+        this.pestMaintenance = pestMaintenance;
     }
 }

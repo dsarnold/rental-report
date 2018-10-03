@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 
 public interface RentalManagementCompany {
 
+    String getWebsite();
+
+    void setWebsite(String website);
+
     String getPhoneNumber();
 
     void setPhoneNumber(String phoneNumber);

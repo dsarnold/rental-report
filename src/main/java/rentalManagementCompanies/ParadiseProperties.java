@@ -3,6 +3,7 @@ package main.java.rentalManagementCompanies;
 import java.math.BigDecimal;
 
 public class ParadiseProperties extends AbstractRentalManagementCompany {
+    private static String website = "http://www.affordablevillasneardisney.com/";
     private static String phoneNumber = "888-922-6425";
     private static Double avgMonthlyOccupancy = .70;
     private static Boolean canOwnersFindBooking = true;
@@ -21,8 +22,6 @@ public class ParadiseProperties extends AbstractRentalManagementCompany {
     private static BigDecimal linenReplacement = BigDecimal.valueOf(0);
 
     public ParadiseProperties() {
-        super(phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
+        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
     }
-
-
 }
