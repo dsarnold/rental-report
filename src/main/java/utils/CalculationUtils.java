@@ -12,7 +12,8 @@ public class CalculationUtils {
     public String getMaxIncome(House house, RentalManagementCompany rms) {
         if (house.getRentalIncome() != null && rms.getManagementFee() != null) {
             BigDecimal maxIncome = this.getCommissionBd(house, rms).subtract(rms.getManagementFee());
-            return maxIncome.toString();
+            //return maxIncome.toString();
+            return "Not Implemented";
         } else {
             return "n/a";
         }

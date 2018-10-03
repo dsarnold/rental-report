@@ -3,6 +3,7 @@ package main.java.rentalManagementCompanies;
 import java.math.BigDecimal;
 
 public class ClcManagement extends AbstractRentalManagementCompany {
+    private static String website = "http://www.clcworldflorida.com/";
     private static String phoneNumber = "407-997-1000";
     private static Double avgMonthlyOccupancy = .79;
     private static Boolean canOwnersFindBooking = false;
@@ -21,7 +22,7 @@ public class ClcManagement extends AbstractRentalManagementCompany {
     private static BigDecimal linenReplacement = BigDecimal.valueOf(30);
 
     public ClcManagement() {
-        super(phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
+        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
     }
 
 

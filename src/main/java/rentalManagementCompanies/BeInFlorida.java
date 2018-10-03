@@ -3,6 +3,7 @@ package main.java.rentalManagementCompanies;
 import java.math.BigDecimal;
 
 public class BeInFlorida extends AbstractRentalManagementCompany {
+    private static String website = "https://beinflorida.com/";
     private static String phoneNumber = "407-574-2091";
     private static Double avgMonthlyOccupancy = .10; //TODO: need to update
     private static Boolean canOwnersFindBooking = true;
@@ -21,7 +22,7 @@ public class BeInFlorida extends AbstractRentalManagementCompany {
     private static BigDecimal linenReplacement = BigDecimal.valueOf(0);
 
     public BeInFlorida() {
-        super(phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
+        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
     }
 
 
