@@ -1,7 +1,7 @@
-package main.Utils;
+package main.java.utils;
 
-import main.pojos.House;
-import main.pojos.RentalManagementCompany;
+import main.java.House;
+import main.java.rentalManagementCompanies.RentalManagementCompany;
 
 import java.math.BigDecimal;
 

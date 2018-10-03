@@ -1,6 +1,6 @@
-package main.optionsPanes;
+package main.java.optionsPanes;
 
-import main.pojos.House;
+import main.java.House;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
