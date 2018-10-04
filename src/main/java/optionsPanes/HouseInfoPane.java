@@ -12,10 +12,7 @@ import java.math.BigDecimal;
 public class HouseInfoPane extends JFrame {
     protected String purchasePrice, updatesPrice, piti, address1, address2, zip, hoaFee, taxes, insurance, rentalIncome;
     private JTextField purchasePriceTextbox, updatesPriceTextbox, pitiTextbox, address1Textbox, address2Textbox, zipTextbox, hoaFeeTextbox,
-    taxesTextbox, insuranceTextbox, rentalIncomeTextbox;
-       private JLabel purchasePriceLabel;
-    private JLabel updatesPriceLabel, pitiLabel, address1Label, address2Label, zipLabel, hoaFeeLabel, taxesLabel, insuranceLabel, rentalIncomeLabel;
-    private JButton submitButton;
+            taxesTextbox, insuranceTextbox, rentalIncomeTextbox, waterCostTextbox, mortgageTextbox;
     private House _house;
 
     public HouseInfoPane(House house) {
@@ -34,70 +31,12 @@ public class HouseInfoPane extends JFrame {
         JPanel panel = new JPanel();
         panel.setBorder(new EmptyBorder(10, 10, 10, 10));
         getContentPane().add(panel);
-        purchasePriceLabel = new JLabel("Purchase Price: ");
-        updatesPriceLabel = new JLabel("Update Price: ");
-        pitiLabel = new JLabel("PITI: ");
-        address1Label = new JLabel("Address 1: ");
-        address2Label = new JLabel("Address 2: ");
-        zipLabel = new JLabel("Zip: ");
-        hoaFeeLabel = new JLabel("HOA Fees");
-        taxesLabel = new JLabel("Taxes");
-        insuranceLabel = new JLabel("Insurance: ");
-        rentalIncomeLabel = new JLabel("Rental Income: ");
-        purchasePriceTextbox = new JTextField(50);
-        if (_house.getPurchasePrice() != null) {
-            purchasePriceTextbox.setText(_house.getPurchasePrice().toString());
-        }
 
-        updatesPriceTextbox = new JTextField(50);
-        if (_house.getUpdatesPrice() != null) {
-            updatesPriceTextbox.setText(_house.getUpdatesPrice().toString());
-        }
-
-        pitiTextbox = new JTextField(5);
-        if (_house.getPiti() != null) {
-            pitiTextbox.setText(_house.getPiti().toString());
-        }
-
-        address1Textbox = new JTextField(5);
-        if (_house.getAddress1() != null) {
-            address1Textbox.setText(_house.getAddress1());
-        }
-
-        address2Textbox = new JTextField(5);
-        if (_house.getAddress2() != null) {
-            address2Textbox.setText(_house.getAddress2());
-        }
-
-        zipTextbox = new JTextField(5);
-        if (_house.getZip() != null) {
-            zipTextbox.setText(_house.getZip());
-        }
-
-        taxesTextbox = new JTextField(5);
-        if (_house.getTaxes() != null) {
-            taxesTextbox.setText(_house.getTaxes().toString());
-        }
-
-        hoaFeeTextbox = new JTextField(5);
-        if (_house.getHoaFee() != null) {
-            hoaFeeTextbox.setText(_house.getHoaFee().toString());
-        }
-
-        insuranceTextbox = new JTextField(5);
-        if (_house.getInsurance() != null) {
-            insuranceTextbox.setText(_house.getInsurance().toString());
-        }
-
-        rentalIncomeTextbox = new JTextField(5);
-        if (_house.getRentalIncome() != null) {
-            rentalIncomeTextbox.setText(_house.getRentalIncome().toString());
-        }
-
-        submitButton = new JButton();
+        JButton submitButton = new JButton();
         submitButton.setText("Update House Info");
         submitButton.addActionListener(new submitListener());
         getContentPane().add("South", submitButton);
+
         panel.setLayout(new GridBagLayout());
         panel.setBackground(Color.WHITE);
         getContentPane().add(panel);
@@ -107,26 +46,91 @@ public class HouseInfoPane extends JFrame {
         right.weightx = 2.0D;
         right.fill = 2;
         right.gridwidth = 0;
-        panel.add(purchasePriceLabel, left);
+
+        panel.add(new JLabel("Purchase Price: "), left);
+        purchasePriceTextbox = new JTextField(50);
+        if (_house.getPurchasePrice() != null) {
+            purchasePriceTextbox.setText(_house.getPurchasePrice().toString());
+        }
         panel.add(purchasePriceTextbox, right);
-        panel.add(updatesPriceLabel, left);
+
+        panel.add(new JLabel("Update Price: "), left);
+        updatesPriceTextbox = new JTextField(50);
+        if (_house.getUpdatesPrice() != null) {
+            updatesPriceTextbox.setText(_house.getUpdatesPrice().toString());
+        }
         panel.add(updatesPriceTextbox, right);
-        panel.add(pitiLabel, left);
-        panel.add(pitiTextbox, right);
-        panel.add(address1Label, left);
+
+        panel.add(new JLabel("Address 1: "), left);
+        address1Textbox = new JTextField(5);
+        if (_house.getAddress1() != null) {
+            address1Textbox.setText(_house.getAddress1());
+        }
         panel.add(address1Textbox, right);
-        panel.add(address2Label, left);
+
+        panel.add(new JLabel("Address 2: "), left);
+        address2Textbox = new JTextField(5);
+        if (_house.getAddress2() != null) {
+            address2Textbox.setText(_house.getAddress2());
+        }
         panel.add(address2Textbox, right);
-        panel.add(zipLabel, left);
+
+        panel.add(new JLabel("Zip: "), left);
+        zipTextbox = new JTextField(5);
+        if (_house.getZip() != null) {
+            zipTextbox.setText(_house.getZip());
+        }
         panel.add(zipTextbox, right);
-        panel.add(hoaFeeLabel, left);
+
+        panel.add(new JLabel("HOA Fees"), left);
+        hoaFeeTextbox = new JTextField(5);
+        if (_house.getHoaFee() != null) {
+            hoaFeeTextbox.setText(_house.getHoaFee().toString());
+        }
         panel.add(hoaFeeTextbox, right);
-        panel.add(taxesLabel, left);
+
+        panel.add(new JLabel("Taxes"), left);
+        taxesTextbox = new JTextField(5);
+        if (_house.getTaxes() != null) {
+            taxesTextbox.setText(_house.getTaxes().toString());
+        }
         panel.add(taxesTextbox, right);
-        panel.add(insuranceLabel, left);
+
+        panel.add(new JLabel("Insurance: "), left);
+        insuranceTextbox = new JTextField(5);
+        if (_house.getInsurance() != null) {
+            insuranceTextbox.setText(_house.getInsurance().toString());
+        }
         panel.add(insuranceTextbox, right);
-        panel.add(rentalIncomeLabel, left);
+
+        panel.add(new JLabel("Rental Income: "), left);
+        rentalIncomeTextbox = new JTextField(5);
+        if (_house.getRentalIncome() != null) {
+            rentalIncomeTextbox.setText(_house.getRentalIncome().toString());
+        }
         panel.add(rentalIncomeTextbox, right);
+
+        panel.add(new JLabel("Water Cost: "), left);
+        waterCostTextbox = new JTextField(5);
+        if (_house.getWaterCost() != null) {
+            waterCostTextbox.setText(_house.getWaterCost().toString());
+        }
+        panel.add(waterCostTextbox, right);
+
+        panel.add(new JLabel("Mortgage: "), left);
+        mortgageTextbox = new JTextField(5);
+        if (_house.getMortgage() != null) {
+            mortgageTextbox.setText(_house.getMortgage().toString());
+        }
+        panel.add(mortgageTextbox, right);
+    }
+
+    private void createBottomPanel(){
+
+    }
+
+    private void createCenterPanel(){
+
     }
 
     private class submitListener implements ActionListener {
@@ -135,43 +139,43 @@ public class HouseInfoPane extends JFrame {
 
         public void actionPerformed(ActionEvent e) {
             if (purchasePriceTextbox.getText().length() != 0) {
-                _house.withPurchasePrice(new BigDecimal(purchasePriceTextbox.getText()));
+                _house.setPurchasePrice(new BigDecimal(purchasePriceTextbox.getText()));
             }
 
             if (updatesPriceTextbox.getText().length() != 0) {
-                _house.withUpdatesPrice(new BigDecimal(updatesPriceTextbox.getText()));
-            }
-
-            if (pitiTextbox.getText().length() != 0) {
-                _house.withPiti(new BigDecimal(pitiTextbox.getText()));
+                _house.setUpdatesPrice(new BigDecimal(updatesPriceTextbox.getText()));
             }
 
             if (address1Textbox.getText().length() != 0) {
-                _house.withAddress1(address1Textbox.getText());
+                _house.setAddress1(address1Textbox.getText());
             }
 
             if (address2Textbox.getText().length() != 0) {
-                _house.withAddress2(address2Textbox.getText());
+                _house.setAddress2(address2Textbox.getText());
             }
 
             if (zipTextbox.getText().length() != 0) {
-                _house.withZip(zipTextbox.getText());
+                _house.setZip(zipTextbox.getText());
             }
 
             if (hoaFeeTextbox.getText().length() != 0) {
-                _house.withHoaFee(new BigDecimal(hoaFeeTextbox.getText()));
+                _house.setHoaFee(new BigDecimal(hoaFeeTextbox.getText()));
             }
 
             if (taxesTextbox.getText().length() != 0) {
-                _house.withTaxes(new BigDecimal(taxesTextbox.getText()));
+                _house.setTaxes(new BigDecimal(taxesTextbox.getText()));
             }
 
             if (insuranceTextbox.getText().length() != 0) {
-                _house.withInsurance(new BigDecimal(insuranceTextbox.getText()));
+                _house.setInsurance(new BigDecimal(insuranceTextbox.getText()));
             }
 
-            if (rentalIncomeTextbox.getText().length() != 0) {
-                _house.withRentalIncome(new BigDecimal(rentalIncomeTextbox.getText()));
+            if (waterCostTextbox.getText().length() != 0) {
+                _house.setWaterCost(new BigDecimal(waterCostTextbox.getText()));
+            }
+
+            if (mortgageTextbox.getText().length() != 0) {
+                _house.setMortgage(new BigDecimal(mortgageTextbox.getText()));
             }
 
             setVisible(false);

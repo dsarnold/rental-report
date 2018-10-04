@@ -8,6 +8,7 @@ public class ParadiseProperties extends AbstractRentalManagementCompany {
     private static Double avgMonthlyOccupancy = .70;
     private static Boolean canOwnersFindBooking = true;
     private static Boolean enterExitFees = false;
+    private static String exitTimeNotification = "60";
     private static Boolean discountForMultipleHomes = true;
     private static String companyName = "Paradise Properties";
     private static Double commission = .2;
@@ -22,6 +23,6 @@ public class ParadiseProperties extends AbstractRentalManagementCompany {
     private static BigDecimal linenReplacement = BigDecimal.valueOf(0);
 
     public ParadiseProperties() {
-        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
+        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, exitTimeNotification, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
     }
 }

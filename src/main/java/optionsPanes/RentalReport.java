@@ -31,13 +31,15 @@ public class RentalReport extends JFrame {
     private PaneUtils paneUtils = new PaneUtils();
 
     public static void main(String[] args) {
-        House house = new House(new BigDecimal(200000), new BigDecimal(2000), new BigDecimal(1500), "123 Brandon Way", "Apt. 3", "12345", new BigDecimal(300), new BigDecimal(150), new BigDecimal(150), new BigDecimal(4000));
+        House house = new House(new BigDecimal(200000), new BigDecimal(2000), "123 Brandon Way", "Apt. 3", "12345", new BigDecimal(300), new BigDecimal(150), new BigDecimal(150), new BigDecimal(4000), new BigDecimal(100), new BigDecimal(1200));
         SwingUtilities.invokeLater(() -> new RentalReport(house));
     }
 
 
     public RentalReport(House house) {
-        _house = new House(house.getPurchasePrice(), house.getUpdatesPrice(), house.getPiti(), house.getAddress1(), house.getAddress2(), house.getZip(), house.getHoaFee(), house.getTaxes(), house.getInsurance(), house.getRentalIncome());
+        _house = new House(house.getPurchasePrice(), house.getUpdatesPrice(), house.getAddress1(), house.getAddress2(),
+                house.getZip(), house.getHoaFee(), house.getTaxes(), house.getInsurance(), house.getRentalIncome(), house.getWaterCost(),
+                house.getMortgage());
         _paradiseRmc = new ParadiseProperties();
         _clcRmc = new ClcManagement();
         _beInFloridaRmc = new BeInFlorida();
@@ -66,16 +68,16 @@ public class RentalReport extends JFrame {
     }
 
     private void createCenterPanel() {
-        _centerPanel = new JPanel(new GridLayout(9, 4));
+        _centerPanel = new JPanel(new GridLayout(12, 4));
         pack();
         _centerPanel.setPreferredSize(new Dimension(400, 400));
         _centerPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         _centerPanel.setBorder(BorderFactory.createRaisedBevelBorder());
 
         _centerPanel.add(paneUtils.gridLabel(""));
-        _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getCompanyName()));
-        _centerPanel.add(paneUtils.gridLabel(_clcRmc.getCompanyName()));
-        _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getCompanyName()));
+        _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getCompanyName()), true);
+        _centerPanel.add(paneUtils.gridLabel(_clcRmc.getCompanyName()), true);
+        _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getCompanyName()), true);
 
         _centerPanel.add(paneUtils.gridLabel("Rental Income"));
         JLabel paradiseRentalIncomeLabel;
@@ -93,6 +95,11 @@ public class RentalReport extends JFrame {
         _centerPanel.add(paradiseRentalIncomeLabel);
         _centerPanel.add(clcRentalIncomeLabel);
         _centerPanel.add(beInFloridaIncomeLabel);
+
+        _centerPanel.add(paneUtils.gridLabel("TOTAL INCOME", true));
+        _centerPanel.add(paneUtils.gridLabel(utils.getTotalIncome(_house), true));
+        _centerPanel.add(paneUtils.gridLabel(utils.getTotalIncome(_house), true));
+        _centerPanel.add(paneUtils.gridLabel(utils.getTotalIncome(_house), true));
 
         _centerPanel.add(paneUtils.gridLabel("Commission"));
         _centerPanel.add(paneUtils.gridLabel(utils.getCommission(_house, _paradiseRmc)));
@@ -119,15 +126,20 @@ public class RentalReport extends JFrame {
         _centerPanel.add(paneUtils.gridLabel(_clcRmc.getResortManagementFee().toString()));
         _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getResortManagementFee().toString()));
 
+        _centerPanel.add(paneUtils.gridLabel("TOTAL RMC COST", true));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaximumRmcCost(_house, _paradiseRmc).toString(), true));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaximumRmcCost(_house, _clcRmc).toString(), true));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMaximumRmcCost(_house, _beInFloridaRmc).toString(), true));
+
         _centerPanel.add(paneUtils.gridLabel("Max Income"));
         _centerPanel.add(paneUtils.gridLabel(utils.getMaxIncome(_house, _paradiseRmc)));
         _centerPanel.add(paneUtils.gridLabel(utils.getMaxIncome(_house, _clcRmc)));
         _centerPanel.add(paneUtils.gridLabel(utils.getMaxIncome(_house, _beInFloridaRmc)));
 
         _centerPanel.add(paneUtils.gridLabel("Min Income"));
-        _centerPanel.add(paneUtils.gridLabel("Not Implemented"));
-        _centerPanel.add(paneUtils.gridLabel("Not Implemented"));
-        _centerPanel.add(paneUtils.gridLabel("Not Implemented"));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMinIncome(_house, _paradiseRmc)));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMinIncome(_house, _clcRmc)));
+        _centerPanel.add(paneUtils.gridLabel(utils.getMinIncome(_house, _beInFloridaRmc)));
     }
 
     private void createLeftPanel() {
@@ -148,13 +160,6 @@ public class RentalReport extends JFrame {
             updatesPriceLabel = new JLabel("Update Price:  " + _house.getUpdatesPrice().toString());
         } else {
             updatesPriceLabel = new JLabel("Update Price:  ");
-        }
-
-        JLabel pitiLabel;
-        if (_house.getPiti() != null) {
-            pitiLabel = new JLabel("PITI: " + _house.getPiti().toString());
-        } else {
-            pitiLabel = new JLabel("PITI: ");
         }
 
         JLabel address1Label;
@@ -208,7 +213,6 @@ public class RentalReport extends JFrame {
 
         purchasePriceLabel.setPreferredSize(new Dimension(200, 15));
         updatesPriceLabel.setPreferredSize(new Dimension(200, 15));
-        pitiLabel.setPreferredSize(new Dimension(200, 15));
         address1Label.setPreferredSize(new Dimension(200, 15));
         address2Label.setPreferredSize(new Dimension(200, 15));
         zipLabel.setPreferredSize(new Dimension(200, 15));
@@ -216,12 +220,12 @@ public class RentalReport extends JFrame {
         taxesLabel.setPreferredSize(new Dimension(200, 15));
         insuranceLabel.setPreferredSize(new Dimension(200, 15));
         rentalIncomeLabel.setPreferredSize(new Dimension(200, 15));
+
         _leftPanel.add(address1Label);
         _leftPanel.add(address2Label);
         _leftPanel.add(zipLabel);
         _leftPanel.add(purchasePriceLabel);
         _leftPanel.add(updatesPriceLabel);
-        _leftPanel.add(pitiLabel);
         _leftPanel.add(hoaFeeLabel);
         _leftPanel.add(taxesLabel);
         _leftPanel.add(insuranceLabel);

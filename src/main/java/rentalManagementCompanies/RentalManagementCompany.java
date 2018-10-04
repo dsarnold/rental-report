@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 
 public interface RentalManagementCompany {
 
+
+
     String getWebsite();
 
     void setWebsite(String website);
@@ -23,6 +25,10 @@ public interface RentalManagementCompany {
     Boolean getEnterExitFees();
 
     void setEnterExitFees(Boolean enterExitFees);
+
+    String getExitTimeNotification();
+
+    void setExitTimeNotification(String exitTimeNotification);
 
     Boolean getDiscountForMultipleHomes();
 
