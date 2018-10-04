@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 public class House {
     BigDecimal purchasePrice;
     BigDecimal updatesPrice;
-    BigDecimal piti;
     String address1;
     String address2;
     String zip;
@@ -13,11 +12,13 @@ public class House {
     BigDecimal taxes;
     BigDecimal insurance;
     BigDecimal rentalIncome;
+    BigDecimal waterCost;
+    BigDecimal mortgage;
 
-    public House(BigDecimal purchasePrice, BigDecimal updatesPrice, BigDecimal piti, String address1, String address2, String zip, BigDecimal hoaFee, BigDecimal taxes, BigDecimal insurance, BigDecimal rentalIncome) {
+    public House(BigDecimal purchasePrice, BigDecimal updatesPrice, String address1, String address2, String zip, BigDecimal hoaFee,
+                 BigDecimal taxes, BigDecimal insurance, BigDecimal rentalIncome, BigDecimal waterCost, BigDecimal mortgage) {
         this.purchasePrice = purchasePrice;
         this.updatesPrice = updatesPrice;
-        this.piti = piti;
         this.address1 = address1;
         this.address2 = address2;
         this.zip = zip;
@@ -25,13 +26,15 @@ public class House {
         this.taxes = taxes;
         this.insurance = insurance;
         this.rentalIncome = rentalIncome;
+        this.waterCost = waterCost;
+        this.mortgage = mortgage;
     }
 
     public String getAddress1() {
         return this.address1;
     }
 
-    public void withAddress1(String address1) {
+    public void setAddress1(String address1) {
         this.address1 = address1;
     }
 
@@ -39,7 +42,7 @@ public class House {
         return this.address2;
     }
 
-    public void withAddress2(String address2) {
+    public void setAddress2(String address2) {
         this.address2 = address2;
     }
 
@@ -47,7 +50,7 @@ public class House {
         return this.zip;
     }
 
-    public void withZip(String zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 
@@ -55,7 +58,7 @@ public class House {
         return this.hoaFee;
     }
 
-    public void withHoaFee(BigDecimal hoaFee) {
+    public void setHoaFee(BigDecimal hoaFee) {
         this.hoaFee = hoaFee;
     }
 
@@ -63,7 +66,7 @@ public class House {
         return this.taxes;
     }
 
-    public void withTaxes(BigDecimal taxes) {
+    public void setTaxes(BigDecimal taxes) {
         this.taxes = taxes;
     }
 
@@ -71,7 +74,7 @@ public class House {
         return this.insurance;
     }
 
-    public void withInsurance(BigDecimal insurance) {
+    public void setInsurance(BigDecimal insurance) {
         this.insurance = insurance;
     }
 
@@ -79,7 +82,7 @@ public class House {
         return this.rentalIncome;
     }
 
-    public void withRentalIncome(BigDecimal rentalIncome) {
+    public void setRentalIncome(BigDecimal rentalIncome) {
         this.rentalIncome = rentalIncome;
     }
 
@@ -87,7 +90,7 @@ public class House {
         return this.purchasePrice;
     }
 
-    public void withPurchasePrice(BigDecimal purchasePrice) {
+    public void setPurchasePrice(BigDecimal purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
 
@@ -95,15 +98,23 @@ public class House {
         return this.updatesPrice;
     }
 
-    public void withUpdatesPrice(BigDecimal updatesPrice) {
+    public void setUpdatesPrice(BigDecimal updatesPrice) {
         this.updatesPrice = updatesPrice;
     }
 
-    public BigDecimal getPiti() {
-        return this.piti;
+    public BigDecimal getWaterCost() {
+        return waterCost;
     }
 
-    public void withPiti(BigDecimal piti) {
-        this.piti = piti;
+    public void setWaterCost(BigDecimal waterCost) {
+        this.waterCost = waterCost;
+    }
+
+    public BigDecimal getMortgage() {
+        return mortgage;
+    }
+
+    public void setMortgage(BigDecimal mortgage) {
+        this.mortgage = mortgage;
     }
 }

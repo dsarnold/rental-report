@@ -8,6 +8,7 @@ public class ClcManagement extends AbstractRentalManagementCompany {
     private static Double avgMonthlyOccupancy = .79;
     private static Boolean canOwnersFindBooking = false;
     private static Boolean enterExitFees = false;
+    private static String exitTimeNotification = "90";
     private static Boolean discountForMultipleHomes = false;
     private static String companyName = "CLC Management";
     private static Double commission = .2;
@@ -22,7 +23,7 @@ public class ClcManagement extends AbstractRentalManagementCompany {
     private static BigDecimal linenReplacement = BigDecimal.valueOf(30);
 
     public ClcManagement() {
-        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
+        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, exitTimeNotification, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
     }
 
 

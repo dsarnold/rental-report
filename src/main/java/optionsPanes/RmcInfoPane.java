@@ -2,7 +2,6 @@ package main.java.optionsPanes;
 
 import main.java.House;
 import main.java.rentalManagementCompanies.RentalManagementCompany;
-import main.java.utils.CalculationUtils;
 import main.java.utils.PaneUtils;
 
 import javax.swing.*;
@@ -46,7 +45,7 @@ public class RmcInfoPane extends JFrame {
     }
     
     private void createCenterPanel(){
-        _centerPanel = new JPanel(new GridLayout(8, 4));
+        _centerPanel = new JPanel(new GridLayout(9, 4));
         pack();
         _centerPanel.setPreferredSize(new Dimension(400, 400));
         _centerPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -76,6 +75,11 @@ public class RmcInfoPane extends JFrame {
         _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getMaxBookingCharge().toString()));
         _centerPanel.add(paneUtils.gridLabel(_clcRmc.getMaxBookingCharge().toString()));
         _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getMaxBookingCharge().toString()));
+
+        _centerPanel.add(paneUtils.gridLabel("Average Monthly Occupancy"));
+        _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getAvgMonthlyOccupancy().toString()));
+        _centerPanel.add(paneUtils.gridLabel(_clcRmc.getAvgMonthlyOccupancy().toString()));
+        _centerPanel.add(paneUtils.gridLabel(_beInFloridaRmc.getAvgMonthlyOccupancy().toString()));
 
         _centerPanel.add(paneUtils.gridLabel("Management Fee"));
         _centerPanel.add(paneUtils.gridLabel(_paradiseRmc.getManagementFee().toString()));

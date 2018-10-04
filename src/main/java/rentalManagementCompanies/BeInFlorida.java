@@ -8,6 +8,7 @@ public class BeInFlorida extends AbstractRentalManagementCompany {
     private static Double avgMonthlyOccupancy = .10; //TODO: need to update
     private static Boolean canOwnersFindBooking = true;
     private static Boolean enterExitFees = true;
+    private static String exitTimeNotification = "60";
     private static Boolean discountForMultipleHomes = true;
     private static String companyName = "Be In Florida";
     private static Double commission = .2;
@@ -22,7 +23,7 @@ public class BeInFlorida extends AbstractRentalManagementCompany {
     private static BigDecimal linenReplacement = BigDecimal.valueOf(0);
 
     public BeInFlorida() {
-        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
+        super(website, phoneNumber, avgMonthlyOccupancy, canOwnersFindBooking, enterExitFees, exitTimeNotification, discountForMultipleHomes, companyName, commission, maxBookingCharge, minBookingCharge, managementFee, resortManagementFee, rentalInsurance, cleaningFee, poolService, pestMaintenance, linenReplacement);
     }
 
 

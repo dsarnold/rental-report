@@ -8,6 +8,7 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
     Double avgMonthlyOccupancy;
     Boolean canOwnersFindBooking;
     Boolean enterExitFees;
+    String exitTimeNotification;
     Boolean discountForMultipleHomes;
     String companyName;
     Double commission;
@@ -21,12 +22,13 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
     BigDecimal pestMaintenance;
     BigDecimal linenReplacement;
 
-    public AbstractRentalManagementCompany(String website, String phoneNumber, Double avgMonthlyOccupancy, Boolean canOwnersFindBooking, Boolean enterExitFees, Boolean discountForMultipleHomes, String companyName, Double commission, Double maxBookingCharge, Double minBookingCharge, BigDecimal managementFee, BigDecimal resortManagementFee, BigDecimal rentalInsurance, BigDecimal cleaningFee, BigDecimal poolService, BigDecimal pestMaintenance, BigDecimal linenReplacement) {
+    public AbstractRentalManagementCompany(String website, String phoneNumber, Double avgMonthlyOccupancy, Boolean canOwnersFindBooking, Boolean enterExitFees,String exitTimeNotification, Boolean discountForMultipleHomes, String companyName, Double commission, Double maxBookingCharge, Double minBookingCharge, BigDecimal managementFee, BigDecimal resortManagementFee, BigDecimal rentalInsurance, BigDecimal cleaningFee, BigDecimal poolService, BigDecimal pestMaintenance, BigDecimal linenReplacement) {
         this.website = website;
         this.phoneNumber = phoneNumber;
         this.avgMonthlyOccupancy = avgMonthlyOccupancy;
         this.canOwnersFindBooking = canOwnersFindBooking;
         this.enterExitFees = enterExitFees;
+        this.exitTimeNotification = exitTimeNotification;
         this.discountForMultipleHomes = discountForMultipleHomes;
         this.companyName = companyName;
         this.commission = commission;
@@ -39,6 +41,16 @@ public abstract class AbstractRentalManagementCompany implements RentalManagemen
         this.poolService = poolService;
         this.pestMaintenance = pestMaintenance;
         this.linenReplacement = linenReplacement;
+    }
+
+    @Override
+    public String getExitTimeNotification() {
+        return exitTimeNotification;
+    }
+
+    @Override
+    public void setExitTimeNotification(String exitTimeNotification) {
+        this.exitTimeNotification = exitTimeNotification;
     }
 
     @Override
