@@ -125,15 +125,7 @@ public class HouseInfoPane extends JFrame {
         panel.add(mortgageTextbox, right);
     }
 
-    private void createBottomPanel(){
-
-    }
-
-    private void createCenterPanel(){
-
-    }
-
-    private class submitListener implements ActionListener {
+    public class submitListener implements ActionListener {
         private submitListener() {
         }
 
