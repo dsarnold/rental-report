@@ -7,35 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05161adb-f210-42e9-a9c1-27510184ca11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RentalReport_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/Utils/CalculationUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/Utils/CalculationUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/Utils/PaneUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/Utils/PaneUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/HouseInfoPane$submitListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/HouseInfoPane$submitListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/HouseInfoPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/HouseInfoPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RentalReport$houseListenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RentalReport$houseListenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RentalReport$rmcListenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RentalReport$rmcListenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RentalReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RentalReport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RmcInfoPane$rmsListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RmcInfoPane$rmsListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RmcInfoPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/optionsPanes/RmcInfoPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/AbstractRentalManagementCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/AbstractRentalManagementCompany.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/BeInFlorida.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/BeInFlorida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/ClcManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/ClcManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/ParadiseProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/ParadiseProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/RentalManagementCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RentalReport/main/java/rentalManagementCompanies/RentalManagementCompany.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/RentalReport_jar/RentalReport.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/RentalReport_jar/RentalReport.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/optionsPanes/HouseInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optionsPanes/HouseInfoPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/optionsPanes/RentalReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optionsPanes/RentalReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/optionsPanes/RmcInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optionsPanes/RmcInfoPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/AbstractRentalManagementCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/AbstractRentalManagementCompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/BeInFlorida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/BeInFlorida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/ClcManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/ClcManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/ParadiseProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/ParadiseProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/RentalManagementCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/RentalManagementCompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/CalculationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CalculationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/PaneUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PaneUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,23 +58,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="4768" />
+          <entry key="java" value="5869" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4768" />
+          <entry key="JAVA" value="5869" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="58" />
+          <entry key="java" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="58" />
+          <entry key="JAVA" value="65" />
         </counts>
       </usages-collector>
     </session>
@@ -109,31 +84,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/optionsPanes/RentalReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="70">
+              <caret line="213" column="72" lean-forward="true" selection-start-line="213" selection-start-column="72" selection-end-line="213" selection-end-column="72" />
               <folding>
-                <element signature="e#11792#12121#0" />
-                <element signature="e#12331#12373#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/CalculationUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
-              <folding>
-                <element signature="method#CalculationUtils#0;class#CalculationUtils#0" />
-                <element signature="method#getMaxIncome#0;class#CalculationUtils#0" />
-                <element signature="method#getMinIncome#0;class#CalculationUtils#0" />
-                <element signature="method#getMinimumRmcCost#0;class#CalculationUtils#0" />
-                <element signature="method#getHouseCost#0;class#CalculationUtils#0" />
-                <element signature="method#getCommissionBd#0;class#CalculationUtils#0" />
-                <element signature="method#getCommission#0;class#CalculationUtils#0" />
-                <element signature="method#getMaxBookingCharge#0;class#CalculationUtils#0" />
-                <element signature="method#getTotalIncome#0;class#CalculationUtils#0" />
+                <element signature="method#RentalReport#0;class#RentalReport#0" />
+                <element signature="method#createLeftPanel#0;class#RentalReport#0" />
+                <element signature="method#createBottomPanel#0;class#RentalReport#0" />
+                <element signature="class#houseListenter#0;class#RentalReport#0" />
+                <element signature="class#rmcListenter#0;class#RentalReport#0" />
               </folding>
             </state>
           </provider>
@@ -142,36 +100,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/PaneUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/optionsPanes/HouseInfoPane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="177" column="35" selection-start-line="177" selection-start-column="35" selection-end-line="177" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4970#5006#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/House.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="108" column="28" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="28" />
-              <folding>
-                <element signature="e#2062#2063#0" expanded="true" />
-                <element signature="e#2110#2111#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,9 +140,10 @@
       <find>enter</find>
       <find>purchasePriceTextbox</find>
       <find>set</find>
-      <find>rentalIncomeTextbox</find>
       <find>piti</find>
+      <find>rentalIncomeTextbox</find>
       <find>total</find>
+      <find>_paradiseManagementFeeLabel</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -221,6 +154,8 @@
       <replace>panel</replace>
       <replace>beInFlorida</replace>
       <replace>paneUtils.gridLabel</replace>
+      <replace>setText(&quot;&quot;)</replace>
+      <replace>setText(&quot;)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -250,10 +185,10 @@
         <option value="$PROJECT_DIR$/src/main/java/rentalManagementCompanies/AbstractRentalManagementCompany.java" />
         <option value="$PROJECT_DIR$/src/main/java/optionsPanes/RmcInfoPane.java" />
         <option value="$PROJECT_DIR$/src/main/java/House.java" />
-        <option value="$PROJECT_DIR$/src/main/java/optionsPanes/HouseInfoPane.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/CalculationUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/optionsPanes/RentalReport.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/PaneUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/optionsPanes/HouseInfoPane.java" />
+        <option value="$PROJECT_DIR$/src/main/java/optionsPanes/RentalReport.java" />
       </list>
     </option>
   </component>
@@ -330,7 +265,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538622057600" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538710314885" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../RentalPropertyNumbers" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
@@ -395,7 +330,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20067114" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20067114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -454,6 +389,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/optionsPanes/RentalReport.java</url>
+          <line>102</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/listeners/HouseListener.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
@@ -470,13 +417,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pojos/IRentalManagementCompany.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="64" lean-forward="true" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojos/IRentalManagementCompany.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/rentalManagementCompanies/BeInFlorida.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -538,25 +479,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/optionsPanes/HouseInfoPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="177" column="35" selection-start-line="177" selection-start-column="35" selection-end-line="177" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4970#5006#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/CalculationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
+        <state relative-caret-position="136">
           <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
           <folding>
             <element signature="method#CalculationUtils#0;class#CalculationUtils#0" />
             <element signature="method#getMaxIncome#0;class#CalculationUtils#0" />
             <element signature="method#getMinIncome#0;class#CalculationUtils#0" />
+            <element signature="method#getMaximumRmcCost#0;class#CalculationUtils#0" />
             <element signature="method#getMinimumRmcCost#0;class#CalculationUtils#0" />
             <element signature="method#getHouseCost#0;class#CalculationUtils#0" />
             <element signature="method#getCommissionBd#0;class#CalculationUtils#0" />
@@ -567,10 +498,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/GridBagConstraints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="398" column="18" selection-start-line="398" selection-start-column="18" selection-end-line="398" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="744" column="16" selection-start-line="744" selection-start-column="16" selection-end-line="744" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/optionsPanes/HouseInfoPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="37" selection-end-column="52" />
+          <folding>
+            <element signature="class#submitListener#0;class#HouseInfoPane#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/javax/swing/JPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+          <folding>
+            <element signature="e#3318#3319#0" expanded="true" />
+            <element signature="e#3371#3372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/PaneUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="153">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -579,11 +545,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/optionsPanes/RentalReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="70">
+          <caret line="213" column="72" lean-forward="true" selection-start-line="213" selection-start-column="72" selection-end-line="213" selection-end-column="72" />
           <folding>
-            <element signature="e#11792#12121#0" />
-            <element signature="e#12331#12373#0" />
+            <element signature="method#RentalReport#0;class#RentalReport#0" />
+            <element signature="method#createLeftPanel#0;class#RentalReport#0" />
+            <element signature="method#createBottomPanel#0;class#RentalReport#0" />
+            <element signature="class#houseListenter#0;class#RentalReport#0" />
+            <element signature="class#rmcListenter#0;class#RentalReport#0" />
           </folding>
         </state>
       </provider>
